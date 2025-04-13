@@ -1,15 +1,22 @@
 {
-  "name": "testes-contrato-pactum",
+  "name": "pactum-contract",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/**/*.test.js",
+    "test:produtosProvider": "mocha ./test/contract/produtosProvider.test.js",
+    "test:produtosConsumer": "mocha ./test/contract/produtosConsumer.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "cypress": "^14.3.0"
+    "cypress": "^14.2.0",
+    "mocha": "^11.1.0",
+    "pactum": "^3.7.6"
+  },
+  "dependencies": {
+    "pactum-flow-plugin": "^0.1.4"
   }
 }
